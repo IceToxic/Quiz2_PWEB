@@ -12,7 +12,7 @@ if( isset($_SESSION["login"]) ) {
         $password = $_POST['password'];
         $result = row($username,$password);
         if ($result == false ){
-          echo "gagal";
+          echo "<script>alert('username / password salah');</script>";
         } else{
           $_SESSION['username'] = $result['username'];
           $_SESSION['id'] = $result['id'];
